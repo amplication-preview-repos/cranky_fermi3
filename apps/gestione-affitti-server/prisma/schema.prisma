@@ -1,0 +1,110 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Contratti {
+  affitto                           Float?
+  altreSpese                        String?
+  condizioniSpecialiClausole        String?
+  createdAt                         DateTime  @default(now())
+  dataPagamento                     DateTime?
+  depositoCauzione                  Float?
+  durataContratto                   Int?
+  fineLocazione                     DateTime?
+  id                                String    @id @default(cuid())
+  identificativo                    String?
+  inizioLocazione                   DateTime?
+  inquilini                         String?
+  noteVarie                         String?
+  numeroRegistrazioneAgenziaEntrate String?
+  pagamento                         String?
+  propriet                          String?
+  spese                             Float?
+  tipologia                         String?
+  updatedAt                         DateTime  @updatedAt
+}
+
+model Immobili {
+  canone                 Float?
+  cap                    String?
+  caparraIniziale        Float?
+  categoriaCatasto       String?
+  citt                   String?
+  classe                 String?
+  contratto              Json?
+  createdAt              DateTime @default(now())
+  descrizione            String?
+  documenti              Json?
+  foglioCatastale        String?
+  foto                   Json?
+  id                     String   @id @default(cuid())
+  imu                    Float?
+  indirizzo              String?
+  mq2                    Int?
+  note                   String?
+  numero                 String?
+  numeroLocali           Int?
+  numeroLocaliAggiuntivi Int?
+  paese                  String?
+  particella             String?
+  partita                String?
+  piani                  Int?
+  regione                String?
+  renditaCatastale       Float?
+  riferimentiCatastali   String?
+  sezioneUrbana          String?
+  spese                  Float?
+  subalterno             String?
+  tipoLocazione          String?
+  tipologiaPropriet      String?
+  updatedAt              DateTime @updatedAt
+  zonaCensuaria          String?
+}
+
+model Pagamenti {
+  aggiungiEntrata  Float?
+  aggiungiSpesa    Float?
+  avere            Float?
+  createdAt        DateTime @default(now())
+  dare             Float?
+  id               String   @id @default(cuid())
+  nonPagati        Boolean?
+  pagati           Boolean?
+  riepilogo        String?
+  rimanenza        Float?
+  storicoPagamenti String?
+  updatedAt        DateTime @updatedAt
+}
+
+model Utenti {
+  codiceFiscale    String?
+  cognome          String?
+  createdAt        DateTime  @default(now())
+  dataNascita      DateTime?
+  documenti        Json?
+  documentoIdentit String?
+  email            String?
+  id               String    @id @default(cuid())
+  luogoNascita     String?
+  nome             String?
+  note             String?
+  telefono         String?
+  updatedAt        DateTime  @updatedAt
+}
+
+model User {
+  createdAt DateTime @default(now())
+  email     String?  @unique
+  firstName String?
+  id        String   @id @default(cuid())
+  lastName  String?
+  password  String
+  roles     Json
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}

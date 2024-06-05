@@ -1,0 +1,21 @@
+export type Contratti = {
+  affitto: number | null;
+  altreSpese: string | null;
+  condizioniSpecialiClausole: string | null;
+  createdAt: Date;
+  dataPagamento: Date | null;
+  depositoCauzione: number | null;
+  durataContratto: number | null;
+  fineLocazione: Date | null;
+  id: string;
+  identificativo: string | null;
+  inizioLocazione: Date | null;
+  inquilini: string | null;
+  noteVarie: string | null;
+  numeroRegistrazioneAgenziaEntrate: string | null;
+  pagamento: string | null;
+  propriet: string | null;
+  spese: number | null;
+  tipologia: string | null;
+  updatedAt: Date;
+};

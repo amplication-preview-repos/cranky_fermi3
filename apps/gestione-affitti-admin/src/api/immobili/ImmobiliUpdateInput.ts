@@ -1,0 +1,35 @@
+import { InputJsonValue } from "../../types";
+
+export type ImmobiliUpdateInput = {
+  canone?: number | null;
+  cap?: string | null;
+  caparraIniziale?: number | null;
+  categoriaCatasto?: string | null;
+  citt?: string | null;
+  classe?: string | null;
+  contratto?: InputJsonValue;
+  descrizione?: string | null;
+  documenti?: InputJsonValue;
+  foglioCatastale?: string | null;
+  foto?: InputJsonValue;
+  imu?: number | null;
+  indirizzo?: string | null;
+  mq2?: number | null;
+  note?: string | null;
+  numero?: string | null;
+  numeroLocali?: number | null;
+  numeroLocaliAggiuntivi?: number | null;
+  paese?: string | null;
+  particella?: string | null;
+  partita?: string | null;
+  piani?: number | null;
+  regione?: string | null;
+  renditaCatastale?: number | null;
+  riferimentiCatastali?: string | null;
+  sezioneUrbana?: string | null;
+  spese?: number | null;
+  subalterno?: string | null;
+  tipoLocazione?: string | null;
+  tipologiaPropriet?: string | null;
+  zonaCensuaria?: string | null;
+};

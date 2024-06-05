@@ -1,0 +1,38 @@
+import { SortOrder } from "../../util/SortOrder";
+
+export type ImmobiliOrderByInput = {
+  canone?: SortOrder;
+  cap?: SortOrder;
+  caparraIniziale?: SortOrder;
+  categoriaCatasto?: SortOrder;
+  citt?: SortOrder;
+  classe?: SortOrder;
+  contratto?: SortOrder;
+  createdAt?: SortOrder;
+  descrizione?: SortOrder;
+  documenti?: SortOrder;
+  foglioCatastale?: SortOrder;
+  foto?: SortOrder;
+  id?: SortOrder;
+  imu?: SortOrder;
+  indirizzo?: SortOrder;
+  mq2?: SortOrder;
+  note?: SortOrder;
+  numero?: SortOrder;
+  numeroLocali?: SortOrder;
+  numeroLocaliAggiuntivi?: SortOrder;
+  paese?: SortOrder;
+  particella?: SortOrder;
+  partita?: SortOrder;
+  piani?: SortOrder;
+  regione?: SortOrder;
+  renditaCatastale?: SortOrder;
+  riferimentiCatastali?: SortOrder;
+  sezioneUrbana?: SortOrder;
+  spese?: SortOrder;
+  subalterno?: SortOrder;
+  tipoLocazione?: SortOrder;
+  tipologiaPropriet?: SortOrder;
+  updatedAt?: SortOrder;
+  zonaCensuaria?: SortOrder;
+};
